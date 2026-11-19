@@ -1,8 +1,10 @@
 def clean_dish_name(name):
     """
     Removes the chef's-special markers (*, #, ~) and title-cases the name.
-    Assumes name is a non-empty string.
+    Hardened against None, non-string, or malformed input.
     """
+    if not isinstance(name, str):
+        return ""
     name = name.strip()
     for ch in ['*', '#', '~']:
         name = name.replace(ch, '')
@@ -11,17 +13,37 @@ def clean_dish_name(name):
 def parse_item_prices(text):
     """
     Parses comma-separated prices into a list of ints.
-    Assumes every price is a whole number.
+    Hardened against None, empty strings, non-numeric strings, and malformed inputs.
     """
-    return [int(price) for price in text.split(',')]
+    if not isinstance(text, str):
+        return []
+    prices = []
+    for item in text.split(','):
+        item = item.strip()
+        try:
+            prices.append(int(item))
+        except (ValueError, TypeError):
+            continue
+    return prices
 
 def split_amount(text):
     """
     Splits 'TOTAL/PEOPLE' into the amount each person pays.
-    Assumes both values are whole numbers and people is not zero.
+    Hardened against None, invalid formats, division by zero, and non-numeric values.
     """
-    total, people = text.split('/')
-    return int(total) // int(people)
+    if not isinstance(text, str):
+        return 0
+    parts = text.split('/')
+    if len(parts) != 2:
+        return 0
+    try:
+        total = int(parts[0].strip())
+        people = int(parts[1].strip())
+        if people <= 0:
+            return 0
+        return total // people
+    except (ValueError, TypeError, ZeroDivisionError):
+        return 0
 
 def main():
     print("==== Running clean_dish_name ====")
