@@ -235,7 +235,8 @@ def create_lab6_pdf(pdf_path):
     story.append(HRFlowable(width="100%", thickness=1.5, color=colors.HexColor('#1A237E'), spaceAfter=10))
 
     meta_data = [
-        [Paragraph("<b>Student Name:</b> Navyakishore Dash", meta_style), Paragraph("<b>Repository:</b> SETAPESU26/L6_L7_58_restaurant_bill", meta_style)],
+        [Paragraph("<b>Student Name:</b> Navyakishore Dash", meta_style), Paragraph("<b>SRN:</b> PES2UG24CS307", meta_style)],
+        [Paragraph("<b>Course:</b> Software Engineering", meta_style), Paragraph("<b>Repository:</b> SETAPESU26/L6_L7_58_restaurant_bill", meta_style)],
         [Paragraph("<b>Topic:</b> Lab 6 Code & Branch Coverage", meta_style), Paragraph("<b>Tools:</b> Python 3.12, Pytest, Pytest-Cov", meta_style)]
     ]
     meta_table = Table(meta_data, colWidths=[260, 270])
@@ -302,3 +303,5 @@ def create_lab6_pdf(pdf_path):
 
 create_lab6_pdf("LAB6/LAB6_Report.pdf")
 create_lab6_pdf("LAB6/SRN_NAME_LAB6.pdf")
+create_lab6_pdf("LAB6/PES2UG24CS307_NavyakishoreDash_LAB6.pdf")
+create_lab6_pdf("LAB6/PES2UG24CS307_Navya_LAB6.pdf")

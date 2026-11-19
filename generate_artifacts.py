@@ -301,7 +301,8 @@ def create_lab7_pdf(pdf_path):
 
     # Student metadata table
     meta_data = [
-        [Paragraph("<b>Student Name:</b> Navyakishore Dash", meta_style), Paragraph("<b>Repository:</b> SETAPESU26/L6_L7_58_restaurant_bill", meta_style)],
+        [Paragraph("<b>Student Name:</b> Navyakishore Dash", meta_style), Paragraph("<b>SRN:</b> PES2UG24CS307", meta_style)],
+        [Paragraph("<b>Course:</b> Software Engineering", meta_style), Paragraph("<b>Repository:</b> SETAPESU26/L6_L7_58_restaurant_bill", meta_style)],
         [Paragraph("<b>Topic:</b> Lab 7 Fuzz Testing", meta_style), Paragraph("<b>Tools:</b> Python 3.12, Hypothesis, Pytest", meta_style)]
     ]
     meta_table = Table(meta_data, colWidths=[260, 270])
@@ -498,3 +499,5 @@ def test_split_amount_no_crash(s):
 
 create_lab7_pdf("LAB7/SRN_NAME_LAB7.pdf")
 create_lab7_pdf("LAB7/NavyakishoreDash_LAB7.pdf")
+create_lab7_pdf("LAB7/PES2UG24CS307_NavyakishoreDash_LAB7.pdf")
+create_lab7_pdf("LAB7/PES2UG24CS307_Navya_LAB7.pdf")
