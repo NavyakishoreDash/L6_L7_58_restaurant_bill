@@ -15,7 +15,7 @@ GITHUB REPOSITORY:
   https://github.com/NavyakishoreDash/L6_L7_58_restaurant_bill
 
 DELIVERABLES INCLUDED:
-  1. PES2UG24CS307_NavyakishoreDash_LAB2_Report.pdf (Strict 4-page formal submission)
+  1. PES2UG24CS307_NavyakishoreDash_LAB2_Report.pdf (Beautified 4-page formal submission)
   2. PES2UG24CS307_NavyakishoreDash_LAB2_Report.docx (Word Document version)
   3. screenshots/SS1_jira_backlog.png (Jira Backlog view with Epics and User Stories)
   4. screenshots/SS1_create_story.png (Jira User Story creation dialog)
